@@ -78,4 +78,3 @@ func BenchmarkUnaryLatency(b *testing.B) {
 		}
 	}
 }
-
