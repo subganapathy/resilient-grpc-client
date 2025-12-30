@@ -1,0 +1,23 @@
+# Go
+/bin/
+/dist/
+*.exe
+*.test
+*.out
+*.prof
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Local
+.env
+IMPLEMENTATION_WALKTHROUGH.md
+
+# E2E development docs (internal notes, not needed for users)
+e2e/BUILD_FIXES.md
+e2e/E2E_SETUP.md
+e2e/PROTO_SETUP.md
+e2e/TEST_REPORT.md
+

@@ -1,0 +1,11 @@
+# Binaries
+test-server
+test-client
+*.exe
+
+# Test artifacts
+*.log
+test-results/
+
+# Generated proto files (will be generated during build)
+proto/*.pb.go
