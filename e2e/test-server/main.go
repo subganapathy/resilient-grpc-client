@@ -12,7 +12,7 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/keepalive"
 
-	pb "github.com/yourusername/resilient-grpc-client/e2e/proto"
+	pb "github.com/subganapathy/resilient-grpc-client/e2e/proto"
 )
 
 type echoServer struct {

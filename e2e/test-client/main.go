@@ -16,8 +16,8 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	pb "github.com/yourusername/resilient-grpc-client/e2e/proto"
-	rgrpc "github.com/yourusername/resilient-grpc-client/rgrpc"
+	pb "github.com/subganapathy/resilient-grpc-client/e2e/proto"
+	rgrpc "github.com/subganapathy/resilient-grpc-client/rgrpc"
 )
 
 func main() {

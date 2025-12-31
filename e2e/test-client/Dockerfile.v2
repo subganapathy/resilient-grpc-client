@@ -22,7 +22,7 @@ RUN go mod tidy
 # Build from root module context
 WORKDIR /build/e2e/test-client
 RUN CGO_ENABLED=0 GOOS=linux go build -mod=mod -o test-client \
-    -replace github.com/yourusername/resilient-grpc-client/e2e/proto=../proto \
+    -replace github.com/subganapathy/resilient-grpc-client/e2e/proto=../proto \
     ./main.go
 
 FROM alpine:latest

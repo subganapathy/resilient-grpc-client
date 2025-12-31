@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package echo;
 
-option go_package = "github.com/yourusername/resilient-grpc-client/e2e/proto;echo";
+option go_package = "github.com/subganapathy/resilient-grpc-client/e2e/proto;echo";
 
 // EchoService provides simple echo functionality for testing
 service EchoService {

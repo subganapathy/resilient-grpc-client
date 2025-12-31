@@ -1,4 +1,4 @@
-module github.com/yourusername/resilient-grpc-client/e2e/proto
+module github.com/subganapathy/resilient-grpc-client/e2e/proto
 
 go 1.25
 
