@@ -1,6 +1,6 @@
-# Binaries
-test-server
-test-client
+# Binaries (built artifacts, not source directories)
+/test-server/test-server
+/test-client/test-client
 *.exe
 
 # Test artifacts

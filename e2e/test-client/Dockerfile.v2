@@ -1,0 +1,34 @@
+# Alternative approach: Build test-client as part of root module
+# This avoids the replace directive issues
+FROM golang:1.25-alpine AS builder
+
+WORKDIR /build
+
+# Install protoc
+RUN apk add --no-cache protobuf protoc make
+
+# Copy entire project
+COPY . .
+
+# Generate go.sum for proto package (standalone module)
+WORKDIR /build/e2e/proto
+RUN go mod tidy
+
+# Build test-client using root module
+# We'll create a temporary go.mod that uses the root module
+WORKDIR /build
+RUN go mod tidy
+
+# Build from root module context
+WORKDIR /build/e2e/test-client
+RUN CGO_ENABLED=0 GOOS=linux go build -mod=mod -o test-client \
+    -replace github.com/yourusername/resilient-grpc-client/e2e/proto=../proto \
+    ./main.go
+
+FROM alpine:latest
+RUN apk --no-cache add ca-certificates
+WORKDIR /app
+COPY --from=builder /build/e2e/test-client/test-client .
+EXPOSE 8080
+CMD ["./test-client"]
+
